@@ -1,0 +1,20 @@
+<%- include('partials/header') %>
+    <main class="link-offset-3 link-offset-3-hover" >
+        <div class="container text-center" style="padding-top: 20px; padding-bottom: 20px;">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+            <% characters.forEach(function(character) { %>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="<%= character.imageUrl %>" class="card-img-top" alt="<%= character.name %>">
+                        <div class="card-body">
+                            <h5 class="card-title"><%= character.name %></h5>
+                            <p class="card-text"><%= character.description %></p>
+                        </div>
+                    </div>
+                </div>
+            <% }); %>
+            </div>
+        </div>
+    </main>
+
+<%- include('partials/footer') %>
