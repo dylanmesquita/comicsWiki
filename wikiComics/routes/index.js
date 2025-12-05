@@ -13,4 +13,9 @@ router.get('/', async function(req, res, next) {
   }
 });
 
+/* GET new character form. */
+router.get('/new', function(req, res, next) {
+  res.render('newCharacter', { title: 'Add New Character' });
+});
+
 module.exports = router;

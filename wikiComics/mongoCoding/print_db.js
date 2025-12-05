@@ -8,7 +8,7 @@ async function printAll() {
     const characters = await Character.find().lean();
     console.log(JSON.stringify(characters, null, 2));
   } catch (err) {
-    console.error('Error fetching characters:', err);
+    console.error('deu erro ai:', err);
   } finally {
     await mongoose.disconnect();
   }
