@@ -1,2 +1,6 @@
 node_modules/
+mongoCoding/
+
+seed.js
+
 .env

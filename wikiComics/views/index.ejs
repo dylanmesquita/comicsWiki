@@ -5,10 +5,10 @@
             <% characters.forEach(function(character) { %>
                 <div class="col">
                     <div class="card h-100">
-                        <img src="<%= character.imageUrl %>" class="card-img-top" alt="<%= character.name %>">
+                        <img src="<%= character.imageUrl %>" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title"><%= character.name %></h5>
-                            <p class="card-text"><%= character.description %></p>
+                            <p class="card-text"><%= character.lightDescription %></p>
                         </div>
                     </div>
                 </div>

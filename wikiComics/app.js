@@ -3,6 +3,15 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+require('dotenv').config();
+var mongoose = require('mongoose');
+
+// Connect to MongoDB
+mongoose.connect(process.env.MONGO_URI).then(() => {
+  console.log('Connected to MongoDB');
+}).catch(err => {
+  console.error('MongoDB connection error:', err);
+});
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
