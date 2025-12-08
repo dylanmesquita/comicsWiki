@@ -4,7 +4,7 @@
 
     <h1 class="textoNew text-center mb-4">Adicionar Novo Personagem</h1>
 
-    <form action="/characters/new" method="POST" class="mx-auto" style="max-width: 700px;">
+    <form action="/characters/new" method="POST" enctype="multipart/form-data" class="mx-auto" style="max-width: 700px;">
 
         <div class="mb-3">
             <label class="formingLetter form-label">Nome</label>
@@ -38,12 +38,12 @@
 
         <div class="mb-3">
             <label class="formingLetter form-label">Aparições (separadas por vírgula)</label>
-            <input type="text" name="aparicoes" class="form-control">
+            <input type="text" name="aparicoes" class="form-control ">
         </div>
 
         <div class="mb-3">
             <label class="formingLetter form-label">URL da Imagem</label>
-            <input type="text" name="imageUrl" class="form-control" placeholder="https://">
+            <input type="file" name="image" class="form-control cloudinary-fileupload" placeholder="https://" accept="image/*">
         </div>
 
         <div class="text-center mt-4">

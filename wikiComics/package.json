@@ -15,6 +15,8 @@
     "http-errors": "~1.6.3",
     "mongoose": "^9.0.0",
     "mongosh": "^2.5.10",
-    "morgan": "1.10.1"
+    "morgan": "1.10.1",
+    "multer": "^2.0.2",
+    "streamifier": "^0.1.1"
   }
 }
