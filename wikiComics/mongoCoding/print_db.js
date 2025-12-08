@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const Character = require('../models/character');
 
 async function printAll() {
+
   try {
     await mongoose.connect(process.env.MONGO_URI);
     const characters = await Character.find().lean();
@@ -15,6 +16,7 @@ async function printAll() {
 }
 
 printAll();
+
 // const Character = require('../models/character');
 
 // Character.find()

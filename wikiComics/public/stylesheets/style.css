@@ -32,15 +32,30 @@
       color: #000000;
     }
     
+    .textoNew{
+      color: rgb(255, 255, 255);
+      font-family: 'Bangers', cursive;
+      font-size: 2.5rem;
+      text-shadow: 2px 2px #000000;
+    }
 
+    .formingLetter{
+      color: rgb(255, 255, 255);
+      font-family: 'Bangers', cursive;
+      font-size: 1.2rem;
+      text-shadow: 2px 2px #000000;
+    }
   
-    h1 {
+
+    h1{
       font-size: 3.5rem;
       letter-spacing: 2px;
     }
 
+
+
     h2{
-       font-family: 'Bangers', cursive;
+      font-family: 'Bangers', cursive;
       font-size: 1.8rem;
       text-shadow: 3px 3px #000000;
     }
@@ -63,7 +78,7 @@
       transform: scale(1.03);
     }
 
-    .card-title {
+    .card-title{
       font-family: 'Bangers', cursive;
       font-size: 1.8rem;
       text-shadow: 1px 1px #ffcc00;
