@@ -6,7 +6,6 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
-    "cloudinary": "^2.8.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "dotenv": "^17.2.3",
@@ -16,7 +15,6 @@
     "mongoose": "^9.0.0",
     "mongosh": "^2.5.10",
     "morgan": "1.10.1",
-    "multer": "^2.0.2",
-    "streamifier": "^0.1.1"
+    "multer": "^2.0.2"
   }
 }

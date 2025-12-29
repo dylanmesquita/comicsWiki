@@ -1,13 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Erro</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Coming Soon</title>
+
+    <link href="reset.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1><%= message %></h1>
+    <div class="bg-coming-soon">
+        <h1 style="font-family: 'Bangers', cursive; font-size: 5rem;">Error 404</h1>
+        <p style="font-size: 1.5rem;">Page not found</p>
+        <a href="../" class="btn btn-danger">Go Back Home</a>
+    </div>
 
-    <% if (error && error.stack) { %>
-        <pre><%= error.stack %></pre>
-    <% } %>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

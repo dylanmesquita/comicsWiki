@@ -5,7 +5,7 @@ require('dotenv').config();
 const apiSecret = process.env.apiSectret || process.env.API_SECRET || null;
 
 /* GET home page. */
-router.get('/', async function(req, res, next) {
+router.get('/', async function (req, res, next) {
   try {
     var characters = await Character.find();
     res.render('index', { title: 'Express', characters: characters });
@@ -16,8 +16,6 @@ router.get('/', async function(req, res, next) {
 });
 
 /* GET new character form. */
-router.get('/new', function(req, res, next) {
-  res.render('newCharacter', { title: 'Add New Character' });
-});
+
 
 module.exports = router;

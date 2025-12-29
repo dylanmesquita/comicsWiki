@@ -8,7 +8,11 @@ var characterSchema = new mongoose.Schema({
     origem: String,
     afiliacoes: [String],
     aparicoes: [String],
-    imageUrl: String
+    imageUrl: String,
+    image: {
+        data: Buffer,
+        contentType: String
+    }
 });
 
 module.exports = mongoose.model('Character', characterSchema);

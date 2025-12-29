@@ -1,57 +1,58 @@
 <%- include('partials/header') %>
 
-<main class="container" style="padding-top: 30px; padding-bottom: 30px;">
+    <main class="container" style="padding-top: 30px; padding-bottom: 30px;">
 
-    <h1 class="textoNew text-center mb-4">Adicionar Novo Personagem</h1>
+        <h1 class="textoNew text-center mb-4">Adicionar Novo Personagem</h1>
 
-    <form action="/characters/new" method="POST" enctype="multipart/form-data" class="mx-auto" style="max-width: 700px;">
+        <form action="/characters/new" method="POST" enctype="multipart/form-data" class="mx-auto"
+            style="max-width: 700px;">
 
-        <div class="mb-3">
-            <label class="formingLetter form-label">Nome</label>
-            <input type="text" name="name" required class="form-control">
-        </div>
+            <div class="mb-3">
+                <label class="formingLetter form-label">Nome</label>
+                <input type="text" name="name" required class="form-control">
+            </div>
 
-        <div class="mb-3">
-            <label class="formingLetter form-label">Descrição completa</label>
-            <textarea name="description" class="form-control" rows="3"></textarea>
-        </div>
+            <div class="mb-3">
+                <label class="formingLetter form-label">Descrição completa</label>
+                <textarea name="description" class="form-control" rows="3"></textarea>
+            </div>
 
-        <div class="mb-3">
-            <label class="formingLetter form-label">Descrição curta</label>
-            <textarea name="shortDescription" class="form-control" rows="2"></textarea>
-        </div>
+            <div class="mb-3">
+                <label class="formingLetter form-label">Descrição curta</label>
+                <textarea name="shortDescription" class="form-control" rows="2"></textarea>
+            </div>
 
-        <div class="mb-3">
-            <label class="formingLetter form-label">Poderes (separados por vírgula)</label>
-            <input type="text" name="poderes" class="form-control" placeholder="Super força, vôo, telepatia">
-        </div>
+            <div class="mb-3">
+                <label class="formingLetter form-label">Poderes (separados por vírgula)</label>
+                <input type="text" name="poderes" class="form-control" placeholder="Super força, vôo, telepatia">
+            </div>
 
-        <div class="mb-3">
-            <label class="formingLetter form-label">Origem</label>
-            <input type="text" name="origem" class="form-control">
-        </div>
+            <div class="mb-3">
+                <label class="formingLetter form-label">Origem</label>
+                <input type="text" name="origem" class="form-control">
+            </div>
 
-        <div class="mb-3">
-            <label class="formingLetter form-label">Afiliações (separadas por vírgula)</label>
-            <input type="text" name="afiliacoes" class="form-control">
-        </div>
+            <div class="mb-3">
+                <label class="formingLetter form-label">Afiliações (separadas por vírgula)</label>
+                <input type="text" name="afiliacoes" class="form-control">
+            </div>
 
-        <div class="mb-3">
-            <label class="formingLetter form-label">Aparições (separadas por vírgula)</label>
-            <input type="text" name="aparicoes" class="form-control ">
-        </div>
+            <div class="mb-3">
+                <label class="formingLetter form-label">Aparições (separadas por vírgula)</label>
+                <input type="text" name="aparicoes" class="form-control ">
+            </div>
 
-        <div class="mb-3">
-            <label class="formingLetter form-label">URL da Imagem</label>
-            <input type="file" name="image" class="form-control cloudinary-fileupload" placeholder="https://" accept="image/*">
-        </div>
+            <div class="mb-3">
+                <label class="formingLetter form-label">Imagem (Upload)</label>
+                <input type="file" name="image" class="form-control" placeholder="Image File" accept="image/*">
+            </div>
 
-        <div class="text-center mt-4">
-            <button type="submit" class="btn btn-danger">Salvar</button>
-        </div>
+            <div class="text-center mt-4">
+                <button type="submit" class="btn btn-danger">Salvar</button>
+            </div>
 
-    </form>
+        </form>
 
-</main>
+    </main>
 
-<%- include('partials/footer') %>
+    <%- include('partials/footer') %>

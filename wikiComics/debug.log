@@ -1,0 +1,28 @@
+
+--- DEBUG: POST /new HIT at 2025-12-09T18:24:50.967Z ---
+req.file: {"fieldname":"image","originalname":"test.txt","encoding":"7bit","mimetype":"text/plain","destination":"uploads/","filename":"0e8154c8ed6c15de193681d5bdf9ccae","path":"uploads\\0e8154c8ed6c15de193681d5bdf9ccae","size":15}
+DEBUG: Config: cloud_name=undefined, api_key=false, api_secret=false
+--- DEBUG: Uploading to Cloudinary... ---
+--- DEBUG: ROUTE UPLOAD START ---
+DEBUG: Cloudinary Config in Route: cloud_name=undefined, api_key_present=false, api_secret_present=false
+
+--- DEBUG: POST /new HIT at 2025-12-09T18:27:24.636Z ---
+req.file: {"fieldname":"image","originalname":"charlmax.png","encoding":"7bit","mimetype":"image/png","destination":"uploads/","filename":"28b2fafb9b80f05cfe5128547f5a3604","path":"uploads\\28b2fafb9b80f05cfe5128547f5a3604","size":1746291}
+DEBUG: Config: cloud_name=undefined, api_key=false, api_secret=false
+--- DEBUG: Uploading to Cloudinary... ---
+--- DEBUG: ROUTE UPLOAD START ---
+DEBUG: Cloudinary Config in Route: cloud_name=undefined, api_key_present=false, api_secret_present=false
+
+--- DEBUG: POST /new HIT at 2025-12-11T16:44:22.276Z ---
+req.file: {"fieldname":"image","originalname":"charlmax.png","encoding":"7bit","mimetype":"image/png","destination":"uploads/","filename":"a4439a47eb60e648288de4818d2c269d","path":"uploads\\a4439a47eb60e648288de4818d2c269d","size":1746291}
+DEBUG: Config: cloud_name=undefined, api_key=false, api_secret=false
+--- DEBUG: Uploading to Cloudinary... ---
+--- DEBUG: ROUTE UPLOAD START ---
+DEBUG: Cloudinary Config in Route: cloud_name=undefined, api_key_present=false, api_secret_present=false
+
+--- DEBUG: POST /new HIT at 2025-12-11T20:59:04.418Z ---
+req.file: {"fieldname":"image","originalname":"charlmax.png","encoding":"7bit","mimetype":"image/png","destination":"uploads/","filename":"f33566f323744f03d2f8516b132cd375","path":"uploads\\f33566f323744f03d2f8516b132cd375","size":1746291}
+DEBUG: Config: cloud_name=undefined, api_key=false, api_secret=false
+--- DEBUG: Uploading to Cloudinary... ---
+--- DEBUG: ROUTE UPLOAD START ---
+DEBUG: Cloudinary Config in Route: cloud_name=undefined, api_key_present=false, api_secret_present=false

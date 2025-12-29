@@ -1,0 +1,37 @@
+<%- include('partials/header') %>
+    <main class="link-offset-3 link-offset-3-hover">
+        <div class="container text-center" style="padding-top: 20px; padding-bottom: 20px;">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="<%= (character.image && character.image.data) ? '/characters/image/' + character._id : character.imageUrl %>"
+                            class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title" style="font-size: 2rem;">
+                                <%= character.name %>
+                            </h5>
+                            <p class="card-text">
+                                <%= character.lightDescription %>
+                            </p>
+                            <p class="card-text">
+                                <%= character.description %>
+                            </p>
+                            <p class="card-text">
+                                <%= character.poderes %>
+                            </p>
+                            <p class="card-text">
+                                <%= character.origem %>
+                            </p>
+                            <p class="card-text">
+                                <%= character.afiliacoes %>
+                            </p>
+                            <p class="card-text">
+                                <%= character.aparicoes %>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <%- include('partials/footer') %>
