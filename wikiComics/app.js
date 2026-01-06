@@ -1,5 +1,5 @@
-require('dotenv').config();  // TEM QUE SER A PRIMEIRA LINHA
-
+require('dotenv').config();  
+const cloudinary = require('cloudinary').v2;
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -7,26 +7,19 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose');
 
-const uri = process.env.MONGO_URI;
-console.log('Attempting to connect to MongoDB...');
-console.log('URI defined?', !!uri);
-if (uri) console.log('URI starts with:', uri.substring(0, 15) + '...');
-
-mongoose.connect(uri, { serverSelectionTimeoutMS: 5000 })
+mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('Conectado ao MongoDB'))
-  .catch(err => {
-    console.error('Erro ao conectar com MongoDB:', err);
-    console.error('Connection error details:', JSON.stringify(err, null, 2));
-  });
-
-mongoose.connection.on('error', err => console.error('Mongoose runtime error:', err));
-
+  .catch(err => console.error('Erro ao conectar com MongoDB:', err));
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var characterRouter = require('./routes/crcter');
 
-
+cloudinary.config({
+  cloud_name: process.env.CLOUD_NAME,
+  api_key: process.env.CLOUD_KEY,
+  api_secret: process.env.CLOUD_SECRET
+});
 
 var app = express();
 
@@ -45,13 +38,12 @@ app.use('/users', usersRouter);
 app.use('/characters', characterRouter);
 
 // 404
-app.use(function (req, res, next) {
+app.use(function(req, res, next) {
   next(createError(404));
 });
 
 // Handler de erro
-app.use(function (err, req, res, next) {
-  console.error('SERVER ERROR:', err); // Log error to console to debug
+app.use(function(err, req, res, next) {
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
