@@ -51,6 +51,7 @@ app.use(function (req, res, next) {
 
 // Handler de erro
 app.use(function (err, req, res, next) {
+  console.error('SERVER ERROR:', err); // Log error to console to debug
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 

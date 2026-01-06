@@ -1,37 +1,79 @@
 <%- include('partials/header') %>
-    <main class="link-offset-3 link-offset-3-hover">
-        <div class="container text-center" style="padding-top: 20px; padding-bottom: 20px;">
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="<%= (character.image && character.image.data) ? '/characters/image/' + character._id : character.imageUrl %>"
-                            class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title" style="font-size: 2rem;">
-                                <%= character.name %>
-                            </h5>
-                            <p class="card-text">
-                                <%= character.lightDescription %>
-                            </p>
-                            <p class="card-text">
-                                <%= character.description %>
-                            </p>
-                            <p class="card-text">
-                                <%= character.poderes %>
-                            </p>
-                            <p class="card-text">
-                                <%= character.origem %>
-                            </p>
-                            <p class="card-text">
-                                <%= character.afiliacoes %>
-                            </p>
-                            <p class="card-text">
-                                <%= character.aparicoes %>
+    <main class="container py-5">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="text-center">
+                    <img src="<%= (character.image && character.image.data) ? '/characters/image/' + character._id : character.imageUrl %>"
+                        class="img-fluid rounded shadow-sm" alt="<%= character.name %>"
+                        style="max-height: 500px; object-fit: cover; width: 100%;">
+                </div>
+            </div>
+            <div class="col-md-8">
+                <h1 class="display-4 fw-bold">
+                    <%= character.name %>
+                </h1>
+
+                <% if (character.lightDescription) { %>
+                    <p class="lead text-muted">
+                        <%= character.lightDescription %>
+                    </p>
+                    <% } %>
+
+                        <hr class="my-4">
+
+                        <div class="mb-4">
+                            <h3>Description</h3>
+                            <p class="fs-5">
+                                <%= character.description || "No description available." %>
                             </p>
                         </div>
+
+                        <div class="row g-4">
+                            <% if (character.poderes && (Array.isArray(character.poderes) && character.poderes.length> 0
+                                || typeof character.poderes === 'string')) { %>
+                                <div class="col-12">
+                                    <h5>Powers & Abilities</h5>
+                                    <div>
+                                        <% let powers=[]; if (Array.isArray(character.poderes)) {
+                                            powers=character.poderes; } else if (typeof character.poderes==='string' ) {
+                                            powers=character.poderes.split(','); } powers.forEach(function(power) {
+                                            if(power && String(power).trim()) { %>
+                                            <span class="badge bg-danger me-1 mb-1">
+                                                <%= String(power).trim() %>
+                                            </span>
+                                            <% } }); %>
+                                    </div>
+                                </div>
+                                <% } %>
+
+                                    <% if (character.origem) { %>
+                                        <div class="col-md-6">
+                                            <h5>Origin</h5>
+                                            <p>
+                                                <%= character.origem %>
+                                            </p>
+                                        </div>
+                                        <% } %>
+
+                                            <div class="col-md-6">
+                                                <h5>First Appearances / Key Issues</h5>
+                                                <p class="text-muted">
+                                                    <%= Array.isArray(character.aparicoes) ? character.aparicoes.join(', ') : character.aparicoes %>
+                        </p>
                     </div>
+
+                    <div class="col-md-6">
+                        <h5>Affiliations</h5>
+                        <p class="text-muted">
+                            <%= Array.isArray(character.afiliacoes) ? character.afiliacoes.join(' , ') : character.afiliacoes %>
+                        </p> 
+                    </div>
+                </div>
+
+                <div class="mt-5">
+                    <a href="/" class="btn btn-outline-dark"><i class="bi bi-arrow-left"></i> Back to Characters</a>
                 </div>
             </div>
         </div>
     </main>
-    <%- include('partials/footer') %>
+<%- include('partials/footer') %>

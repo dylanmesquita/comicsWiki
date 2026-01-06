@@ -1,6 +1,15 @@
 <%- include('partials/header') %>
     <main class="link-offset-3 link-offset-3-hover">
         <div class="container text-center" style="padding-top: 20px; padding-bottom: 20px;">
+            <div class="row mb-4">
+                <div class="col-md-6 mx-auto">
+                    <form action="/" method="GET" class="d-flex">
+                        <input class="form-control me-2" type="search" name="search" placeholder="Search characters..."
+                            aria-label="Search">
+                        <button class="btn btn-outline-danger" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
             <div class="row row-cols-1 row-cols-md-3 g-4">
                 <% characters.forEach(function(character) { %>
                     <div class="col">
@@ -8,14 +17,13 @@
                             <img src="<%= (character.image && character.image.data) ? '/characters/image/' + character._id : character.imageUrl %>"
                                 class="card-img-top">
                             <div class="card-body">
-                                <h5 class="card-title" styl>
+                                <h5 class="card-title" style="">
                                     <%= character.name %>
                                 </h5>
                                 <p class="card-text">
                                     <%= character.lightDescription %>
                                 </p>
-                                <a href="/characters/<%= character._id %>" class="btn btn-danger"
-                                    style="margin-right: 10px;">More</a>
+                                <a href="/characters/<%= character._id %>" class="btn btn-danger" style="">More</a>
                             </div>
                         </div>
                     </div>
