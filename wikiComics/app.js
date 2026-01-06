@@ -1,5 +1,4 @@
 require('dotenv').config();  
-const cloudinary = require('cloudinary').v2;
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -15,11 +14,11 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var characterRouter = require('./routes/crcter');
 
-cloudinary.config({
-  cloud_name: process.env.CLOUD_NAME,
-  api_key: process.env.CLOUD_KEY,
-  api_secret: process.env.CLOUD_SECRET
-});
+// cloudinary.config({
+//   cloud_name: process.env.CLOUD_NAME,
+//   api_key: process.env.CLOUD_KEY,
+//   api_secret: process.env.CLOUD_SECRET
+// });
 
 var app = express();
 
@@ -52,3 +51,4 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
